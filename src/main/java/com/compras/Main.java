@@ -1,4 +1,4 @@
-package com.mcompras;
+package com.compras;
 
 public class Main {
     public static void main(String[] args) {
