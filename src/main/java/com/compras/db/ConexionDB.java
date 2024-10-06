@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class ConexionDB {
 
-    private static final String url = "jdbc:sqlserver://localhost:1433;"
+    private static final String url = "jdbc:sqlserver://26.201.13.126:1433;"
             + "database=BD_ModuloCompra;"
             + "user=sa;"
             + "password=5284;"
@@ -23,4 +23,4 @@ public class ConexionDB {
         }
         return con;
     }
-}
+}//hola amiguitos
