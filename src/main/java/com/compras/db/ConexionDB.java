@@ -16,7 +16,6 @@ public class ConexionDB {
         Connection con = null;
         try {//Captura errores BD, intenta establecer una conexión con la base de datos utilizando la URL proporcionada
             con = DriverManager.getConnection(url);//Se llama la conexxiOn, o en otras palabras se accede a la BD
-            System.out.println("Conexión exitosa a la base de datos");
         } catch (SQLException e) {
             System.out.println("La conexión a la base de datos ha fallado...");
             e.printStackTrace();

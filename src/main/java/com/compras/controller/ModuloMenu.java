@@ -10,6 +10,7 @@ public class ModuloMenu {//Menu principal del modulo
     private static UsuarioServicio servicio = new UsuarioServicio();//Instancia del servicio de usuario para gestionar la lógica relacionada con usuarios
 
     public void ejecutar() {//Método que ejecuta el menú y gestiona la interacción con el usuario
+        System.out.println("========================================");
         System.out.println("Menú: ");
             System.out.println("1. Iniciar Sesión");
             System.out.println("2. Restablecer mi contraseña");
@@ -21,17 +22,22 @@ public class ModuloMenu {//Menu principal del modulo
 
             switch (eleccion) {
                 case 1:
+                System.out.println("========================================");
                     iniciarSesion();
                     break;
                 case 2:
+                System.out.println("========================================");
                     restablecerContrasena();
                     break;
                 case 3:
+                System.out.println("========================================");
                     registrarse();
                     break;
                 case 4:
+                System.out.println("========================================");
                     break;
                 default:
+                System.out.println("========================================");
                     System.out.println("Opción no válida");
             }
     }
@@ -43,7 +49,12 @@ public class ModuloMenu {//Menu principal del modulo
         System.out.println("Ingrese su contraseña: ");
         String contrasena = sc.nextLine();
 
-        servicio.iniciarSesionUsuario(usuario, contrasena);// Llama al servicio para iniciar sesión con los datos ingresados
+        ;// Llama al servicio para iniciar sesión con los datos ingresados
+        ModuloConfiguracion configuracion = new ModuloConfiguracion();
+        
+        if (servicio.iniciarSesionUsuario(usuario, contrasena)) {
+            configuracion.ejecutar();
+        }
     }
 
     public static void restablecerContrasena() {//Método estático que gestiona el restablecimiento de la contraseña del usuario
