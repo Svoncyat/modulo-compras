@@ -1,6 +1,5 @@
 package com.compras;
 
-import com.compras.controller.ModuloConfiguracion;
 import com.compras.controller.ModuloMenu;
 
 public class Main {
