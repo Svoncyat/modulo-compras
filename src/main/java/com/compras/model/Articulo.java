@@ -2,30 +2,36 @@ package com.compras.model;
 
 public class Articulo {
 
-    protected  String codigo;
-    protected  String nombre;
-    protected  int stock;
-    
-    public Articulo(String codigo, String nombre, int stock) {
-        this.codigo = codigo;
+    private int id;
+    private String nombre;
+    private int stock;
+    private String proveedor;
+
+    public Articulo(int id, String nombre, int stock, String proveedor) {
+        this.id = id;
         this.nombre = nombre;
         this.stock = stock;
+        this.proveedor = proveedor;
     }
 
-    
     public void actualizarStock(int cantidad) {
         this.stock += cantidad;
     }
 
-    
-    public String getCodigo() { 
-        return codigo;
-     }
-    public String getNombre() { 
-        return nombre; 
-     }
-    public int getStock() { 
-        return stock; 
-     }
+    public int getId() {
+        return id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public String getProveedor() {
+        return proveedor;
+    }
+
 }
-    
